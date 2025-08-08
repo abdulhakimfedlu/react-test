@@ -1,12 +1,19 @@
 import React from 'react'
 import Navbar from './components/navbar'
-const App = ()=> {
+import Signup from './components/signup'
+import { Routes, Route } from "react-router-dom"
+import Home from "./pages/home"
+
+const App = () => {
   return (
     <div>
-      Hi bro
-      <Navbar/>
+      <Navbar />
+      <Routes>
+        <Route path="/home" element={<Home />} />
+      </Routes>
+      <Signup />
     </div>
   )
-
 }
+
 export default App
